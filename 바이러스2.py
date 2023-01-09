@@ -11,11 +11,10 @@ for _ in range(e): # 관계성 설정
 
 q=deque()
 q.append(1)
-visited[1]=1
+visited[1]=1 # 1은 이미 방문했다고 봄?
 cnt=0
 while q:
     v=q.popleft()
-
     for i in range(1, n+1):
         if graph[v][i]==1 and visited[i]==0:
             q.append(i)
