@@ -10,7 +10,7 @@ for i in range(a):
 for i in range(b):
     see.append((input()))
 
-ans=list(set(hear) & set(see))
+ans=list(set(hear) & set(see)) # set으로 풀어준다음, & 교집합으로 묶어줌
 
 ans.sort()
 print(len(ans))
