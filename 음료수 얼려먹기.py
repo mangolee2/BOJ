@@ -4,10 +4,10 @@ graph = []
 for i in range(n):
     graph.append(list(map(int,input()))) # 맵 정보 입력
 
-def dfs(x,y):
+def dfs(x,y): # 행열이라고 생각 
     if x<=-1 or x>=n or y<=-1 or y>=m:
         return False # 주어진 범위 벗어나는 경우 즉시 종료시키기
-    if graph[x][y]==0:
+    if graph[x][y]==0: # 해당 행열(노드)이 가능한 곳이면, 
         graph[x][y]=1 # 해당 노드 방문 처리해주고 
         dfs(x-1,y)
         dfs(x,y-1)
